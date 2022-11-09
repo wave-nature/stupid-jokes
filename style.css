@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(255, 255, 255);
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("./robot.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #fff;
+  background: #ff3482;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  filter: brightness(95%);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+.joke {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin-top: 12px;
+  font-size: 24px;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+  .btn {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}
